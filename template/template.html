@@ -1,0 +1,16 @@
+<head>
+  <title>template</title>
+</head>
+
+<body>
+{{> template1}}
+{{> mainContent}}
+</body>
+
+<template name="template1">
+  <h1>はじめてのテンプレート</h1>
+</template>
+
+<template name="mainContent">
+  こんにちは{{yourName}}さん。現在時刻は{{now}}です。
+</template>
