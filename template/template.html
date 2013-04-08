@@ -5,6 +5,9 @@
 <body>
 {{> template1}}
 {{> mainContent}}
+{{> simpleVar}}
+{{> nestedVar}}
+{{> parentVar}}
 </body>
 
 <template name="template1">
@@ -13,4 +16,27 @@
 
 <template name="mainContent">
   こんにちは{{yourName}}さん。現在時刻は{{now}}です。
+</template>
+
+<template name="simpleVar">
+  <h2>
+    {{personName}}さんこんにちは!
+</h2>
+</template>
+
+<template name="nestedVar">
+  <h2>
+    {{person.name}}さん、こんにちは!
+  </h2>
+</template>
+
+<template name="parentVar">
+  <h2>
+    {{#with family}}
+      {{#with mother}}
+        お母さんの名前は{{name}}です。
+        お父さんの名前は{{../father.name}}です。
+      {{/with}}
+    {{/with}}
+  </h2>
 </template>

@@ -6,6 +6,17 @@ if (Meteor.isClient) {
   Template.mainContent.now = function () {
     return new Date();
   };
+
+  Template.simpleVar.personName = 'こうたろう';
+
+  Template.nestedVar.person = {
+    name: 'ちほ'
+  };
+
+  Template.parentVar.family = {
+    father: {name: 'しゅんぺい'},
+    mother: {name: 'たえこ'}
+  };
 }
 
 if (Meteor.isServer) {
