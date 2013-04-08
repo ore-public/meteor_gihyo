@@ -17,6 +17,11 @@ if (Meteor.isClient) {
     father: {name: 'しゅんぺい'},
     mother: {name: 'たえこ'}
   };
+
+  Template.arrayVar.fruits = [
+    'りんご', 'ばなな', 'キウイ', 'メロン'
+  ];
+
 }
 
 if (Meteor.isServer) {
